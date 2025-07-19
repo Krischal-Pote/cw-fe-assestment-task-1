@@ -4,7 +4,7 @@ import {  Search } from "lucide-react";
 
 export function Header() {
   return (
-    <header className="flex items-center justify-between px-6 py-4 bg-black border-b border-white-800">
+    <header className="flex items-center justify-between px-6 py-4  border-b border-white-800">
       <div className="flex items-center gap-3" tabIndex={0}>
         <img src="/task1/logo.png" alt="Logo" className="w-10 h-10" />
         <span className="text-white font-semibold text-lg">Wortionary</span>
@@ -12,7 +12,7 @@ export function Header() {
 
       <div className="flex items-center gap-4">
         <div className="relative w-[100px] sm:w-[150px] md:w-[200px]">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--muted-foreground)]" />
         <Input
           aria-label="Header quick search"
           type="text"
@@ -23,7 +23,7 @@ export function Header() {
           className="
             pl-12 
             bg-[#283038]
-            text-black 
+            text-white
             border-none 
             focus:ring-0 
             rounded-lg 
