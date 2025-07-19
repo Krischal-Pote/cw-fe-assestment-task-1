@@ -15,21 +15,33 @@ export const SearchBar = ({
   onSubmit,
   placeholder = "Type to search...",
 }: SearchBarProps) => {
+
+  const handleInputChange = (e:any) => {
+    onChange(e.target.value);
+    console.log("Input changed:", e.target.value);
+  };
+
+  const handleButtonClick = () => {
+    if (value.trim()) {
+        alert(`You have searched: "${value}"`);
+        onSubmit
+      }
+  };
   return (
     <div className="flex items-center bg-[#1C2126] px-4 py-2 rounded-[var(--radius-lg)] w-full max-w-xl mt-6 shadow-md">
-      <Search className="text-muted-foreground mr-3" />
+      <Search className="text-muted-foreground mr-3"/>
       <Input
         aria-label="Search input"
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
+         value={value}
+        onChange={handleInputChange}
         type="text"
         placeholder={placeholder}
-        className="flex-1 bg-transparent border-none outline-none text-white placeholder:text-[var(--muted-foreground)] focus:ring-0"
+        className="flex-1 bg-transparent border-none outline-none text-[var(--input)] placeholder:text-[var(--muted-foreground)] focus:ring-0"
       />
-      <Button
+     <Button
         type="button"
-        onClick={onSubmit}
-        className="bg-[#1980E5] text-white hover:bg-primary/90 ml-4 rounded-[var(--radius-lg)] "
+        onClick={handleButtonClick}
+        className="bg-[#1980E5] text-white hover:bg-[#1565C0] hover:shadow-lg active:bg-[#0D47A1] ml-4 rounded-[var(--radius-lg)] cursor-pointer transition-all duration-200 transform hover:scale-105 active:scale-95"
       >
         Search
       </Button>
