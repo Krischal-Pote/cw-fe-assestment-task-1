@@ -38,7 +38,6 @@ export function Header() {
           value={searchValue}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
-          
           className="
             pl-12 
             bg-[#283038]

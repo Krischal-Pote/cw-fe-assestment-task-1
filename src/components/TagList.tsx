@@ -46,6 +46,8 @@ export function TagList({ title, tags }: TagListProps) {
               focus:ring-blue-500
               focus:ring-opacity-50
             "
+            role="tag"
+            aria-label={`Select ${tag} tag`}
             tabIndex={0}
           >
             {tag}

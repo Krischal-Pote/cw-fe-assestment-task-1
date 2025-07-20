@@ -32,7 +32,7 @@ export const SearchBar = ({
       <Search className="text-muted-foreground mr-3"/>
       <Input
         aria-label="Search input"
-         value={value}
+        value={value}
         onChange={handleInputChange}
         type="text"
         placeholder={placeholder}
@@ -40,6 +40,7 @@ export const SearchBar = ({
       />
      <Button
         type="button"
+        aria-label="Search Button"
         onClick={handleButtonClick}
         className="bg-[#1980E5] text-white hover:bg-[#1565C0] hover:shadow-lg active:bg-[#0D47A1] ml-4 rounded-[var(--radius-lg)] cursor-pointer transition-all duration-200 transform hover:scale-105 active:scale-95"
       >

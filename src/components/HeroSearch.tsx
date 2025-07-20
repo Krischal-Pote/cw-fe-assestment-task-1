@@ -11,7 +11,9 @@ export function HeroSearch() {
         alt="Decorative background"
         className="w-full h-120 object-cover"
       />
-      <div className="absolute inset-0  flex flex-col items-center justify-center text-center px-4">
+      <div className="absolute inset-0  flex flex-col items-center justify-center text-center px-4" role="banner"
+        aria-labelledby="hero-heading"
+      >
         <h1 className="text-4xl md:text-5xl font-bold text-white max-w-2xl">
           Search for words, phrases and meanings
         </h1>
